@@ -1,0 +1,32 @@
+.ticketItem {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__header {
+    font-size: 5rem;
+  }
+  &__container {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    border-bottom: 0.1rem solid #454647;
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+  &__date {
+    padding-top: 0.5rem;
+    font-size: 1rem;
+  }
+  &__subject {
+    font-size: 2rem;
+    padding-top: 0.5rem;
+  }
+}
