@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Ticket = props => {
   return (
@@ -12,4 +13,10 @@ const Ticket = props => {
   );
 };
 
+Ticket.propTypes = {
+  date: PropTypes.string,
+  status: PropTypes.string,
+  subject: PropTypes.string,
+  description: PropTypes.string
+};
 export default Ticket;

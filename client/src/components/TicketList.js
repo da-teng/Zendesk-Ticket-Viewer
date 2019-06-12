@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import moment from "moment";
 
 const TicketList = props => {
@@ -28,4 +29,8 @@ const TicketList = props => {
   );
 };
 
+TicketList.propTypes = {
+  page: PropTypes.string,
+  tickets: PropTypes.array
+};
 export default TicketList;

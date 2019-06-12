@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 const Pagination = props => {
   return (
@@ -14,4 +15,7 @@ const Pagination = props => {
   );
 };
 
+Pagination.propTypes = {
+  pages: PropTypes.array
+};
 export default Pagination;

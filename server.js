@@ -2,9 +2,12 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const axios = require("axios");
+const path = require("path");
 const port = process.env.PORT || 5000;
 app.use(cors());
-
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client/build")));
+}
 app.get("/tickets/:page/:ticketId", (req, res) => {
   console.log("haha");
   console.log(req.params.ticketId);
@@ -15,7 +18,7 @@ app.get("/tickets/:page/:ticketId", (req, res) => {
       }.json`,
       {
         headers: {
-          //Authorization: "Basic (anVuZXRoZGFAZ21haWwuY29tOjE5OTVybWl0)"
+          Authorization: "Basic (anVuZXRoZGFAZ21haWwuY29tOjE5OTVybWl0)"
         }
       }
     )
